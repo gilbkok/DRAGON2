@@ -11,20 +11,20 @@ import java.nio.ByteBuffer;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-public class Main extends WebSocketServer {
+class main extends WebSocketServer {
 
     public static void main(String[] args) {
         ObjectRefs.loadObjects();
         String host = "localhost";
         int port = 8887;
-        WebSocketServer server = new Main(new InetSocketAddress(host, port));
+        WebSocketServer server = new main(new InetSocketAddress(host, port));
         server.setReuseAddr(true);
         Path reloadDir = Paths.get(System.getProperty("user.dir") + "/src/main/java/reload_system/reload/");
         File reloadFile = Paths.get(System.getProperty("user.dir") + "/src/main/java/reload_system/reload/reload.log").toFile();
         new FileWatcher(reloadFile, reloadDir).watch();
         server.run();
     }
-    public Main(InetSocketAddress address) {
+    public main(InetSocketAddress address) {
         super(address);
     }
     @Override

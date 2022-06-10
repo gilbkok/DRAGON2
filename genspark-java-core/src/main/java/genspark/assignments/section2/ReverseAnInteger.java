@@ -4,7 +4,15 @@ import genspark.assignments.Assignment;
 
 public class ReverseAnInteger implements Assignment {
     public String solution(int number) {
-        // ↓↓↓↓ your code goes here ↓↓↓↓
-        return null;
+
+            String S = String.valueOf(number);
+            String result = "";
+            char[] characters = S.toCharArray();
+            for (int i = characters.length - 1; i >= 0; i--) {
+                result += characters[i];
+            }
+            return result;
+        }
     }
-}
+
+

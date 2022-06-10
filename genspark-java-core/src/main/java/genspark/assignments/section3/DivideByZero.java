@@ -4,7 +4,16 @@ import genspark.assignments.Assignment;
 
 public class DivideByZero implements Assignment {
     public Object solution(int one, int two) {
-        // ↓↓↓↓ your code goes here ↓↓↓↓
-        return null;
+
+        try {
+            int z = 0;
+            z += one / two;
+
+            return z;
+
+        } catch (ArithmeticException e) {
+            System.out.print(e.getMessage());
+        }
+        return "Caught Exception: Divide by zero";
     }
 }

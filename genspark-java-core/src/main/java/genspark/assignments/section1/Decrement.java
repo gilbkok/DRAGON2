@@ -4,7 +4,8 @@ import genspark.assignments.Assignment;
 
 public class Decrement implements Assignment {
     public int solution(int num){
-        // ↓↓↓↓ your code goes here ↓↓↓↓
-        return 0;
+    int x= num-1;
+
+        return x;
     }
 }

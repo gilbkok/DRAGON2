@@ -4,7 +4,24 @@ import genspark.assignments.Assignment;
 
 public class CounterForLoop implements Assignment {
     public String solution(int count) {
-        // ↓↓↓↓ your code goes here ↓↓↓↓
-        return null;
+
+        String count1="";
+
+        for (int i = count; i >= 0;--i){
+        count1+=i;
+
+    }
+        return count1;
     }
 }
+
+
+
+
+
+
+
+
+
+
+

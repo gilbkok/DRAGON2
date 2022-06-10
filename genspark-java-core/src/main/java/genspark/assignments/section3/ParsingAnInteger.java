@@ -4,7 +4,12 @@ import genspark.assignments.Assignment;
 
 public class ParsingAnInteger implements Assignment {
     public Object solution(String word) {
-        // ↓↓↓↓ your code goes here ↓↓↓↓
-        return null;
+        try {
+            int number = Integer.parseInt(word);
+            return number;
+        } catch (NumberFormatException e) {
+
+        }
+        return "Caught Exception: Number Format Exception";
     }
 }

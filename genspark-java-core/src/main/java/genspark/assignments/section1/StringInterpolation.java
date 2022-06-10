@@ -4,7 +4,9 @@ import genspark.assignments.Assignment;
 
 public class StringInterpolation implements Assignment {
     public String solution(String str){
-        // ↓↓↓↓ your code goes here ↓↓↓↓
-        return null;
+        String originalString=str;
+        String newString= originalString.replace("%s","INSERTED");
+
+        return (newString);
     }
 }
